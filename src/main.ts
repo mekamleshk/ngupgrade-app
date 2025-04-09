@@ -1,6 +1,11 @@
-import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
-import { AppComponent } from './app/app.component';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppModule } from './app/app.module';
+import { legacyApp } from './legacy/app.module.ajs';
 
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+import './legacy/components/angularjs-component/angularjs-component.component';
+import { UpgradeModule } from '@angular/upgrade/static';
+
+platformBrowserDynamic().bootstrapModule(AppModule).then(platformRef => {
+  const upgrade = platformRef.injector.get(UpgradeModule);
+  upgrade.bootstrap(document.body, [legacyApp.name], { strictDi: true });
+});
