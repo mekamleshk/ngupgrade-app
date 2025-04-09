@@ -3,7 +3,19 @@
 
 A hybrid application demonstrating the integration of **AngularJS (1.8.3)** and **Angular 17** using `@angular/upgrade/static`. This project serves as a template for incremental migration from AngularJS to Angular.
 
-![Hybrid App Demo](demo-screenshot.png)
+![Hybrid App Demo]
+
++---------------------------------------------------+
+| AngularJS Component (Red Border)                  |
+|                                                   |
+|   Data from Angular service!                      |
+|                                                   |
+|   +---------------------------------------------+ |
+|   | Angular 17 Component (Blue Border)          | |
+|   |                                             | |
+|   | Hello from Angular 17!                      | |
+|   +---------------------------------------------+ |
++---------------------------------------------------+
 
 ## Features
 - **Hybrid Bootstrapping**: Angular 17 boots first, then AngularJS
@@ -86,12 +98,3 @@ MIT License - see [LICENSE](LICENSE)
 **Migration Guide**: [Angular Official Upgrade Documentation](https://angular.io/guide/upgrade)  
 **AngularJS Docs**: [AngularJS 1.8 Documentation](https://docs.angularjs.org/api)
 ```
-
-This README:
-1. Clearly explains the hybrid architecture
-2. Provides setup/usage instructions
-3. Documents key implementation details
-4. Includes troubleshooting for common issues
-5. Follows standard GitHub repo conventions
-
-Add a `demo-screenshot.png` showing the working hybrid UI (red AngularJS component containing blue Angular component) for visual confirmation.
